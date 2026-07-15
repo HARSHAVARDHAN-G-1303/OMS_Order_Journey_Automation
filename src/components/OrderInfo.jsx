@@ -2,7 +2,8 @@ import {
   Paper,
   Typography,
   Grid,
-  TextField
+  TextField,
+  MenuItem
 } from "@mui/material";
  
 function OrderInfo({
@@ -62,20 +63,74 @@ function OrderInfo({
  
         <Grid item xs={6}>
           <TextField
+            select
             fullWidth
             label="Currency"
             value={currency}
             onChange={(e)=>setCurrency(e.target.value)}
-          />
+            >
+              <MenuItem value="AED">
+              AED
+            </MenuItem>
+ 
+            <MenuItem value="BHD">
+              BHD
+            </MenuItem>
+            
+            <MenuItem value="JOD">
+              JOD
+            </MenuItem>
+            <MenuItem value="KWD">
+              KWD
+            </MenuItem>
+            <MenuItem value="EGP">
+              EGP
+            </MenuItem>
+            <MenuItem value="QAR">
+              QAR
+            </MenuItem>
+            <MenuItem value="SAR">
+              SAR
+            </MenuItem>
+            
+            </TextField>
+
         </Grid>
  
         <Grid item xs={6}>
           <TextField
+            select
             fullWidth
             label="Country"
             value={country}
             onChange={(e)=>setCountry(e.target.value)}
-          />
+            >
+              <MenuItem value="AE">
+              AE
+            </MenuItem>
+ 
+            <MenuItem value="BH">
+              BH
+            </MenuItem>
+            
+            <MenuItem value="JO">
+              JO
+            </MenuItem>
+            <MenuItem value="KW">
+              KW
+            </MenuItem>
+            <MenuItem value="EG">
+              EG
+            </MenuItem>
+            <MenuItem value="QA">
+              QA
+            </MenuItem>
+            <MenuItem value="SA">
+              SA
+            </MenuItem>
+            </TextField>
+          
+          
         </Grid>
  
       </Grid>

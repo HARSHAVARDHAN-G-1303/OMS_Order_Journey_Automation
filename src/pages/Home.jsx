@@ -10,9 +10,11 @@ import {
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import StorageIcon from "@mui/icons-material/Storage";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import Inventory2Icon from "@mui/icons-material/Inventory2";
+import OutboxIcon from "@mui/icons-material/Outbox";
 import CancelIcon from "@mui/icons-material/Cancel";
  
-function Home({ openCreateOrder }) {
+function Home({ openCreateOrder, openPackShipment }) {
  
   const cardStyle = {
     height: 170,
@@ -117,11 +119,14 @@ function Home({ openCreateOrder }) {
           </Card>
         </Grid>
  
-        {/* Release Order */}
+        {/* Pack Shipment */}
  
         <Grid item xs={12} sm={6} md={3}>
           <Card sx={cardStyle}>
-            <CardActionArea>
+            <CardActionArea
+            sx={{ height: "100%" }}
+              onClick={openPackShipment}
+              >
               <CardContent
                 sx={{
                   display: "flex",
@@ -131,7 +136,7 @@ function Home({ openCreateOrder }) {
                   height: "100%"
                 }}
               >
-                <LocalShippingIcon
+                <OutboxIcon
                   color="warning"
                   sx={{ fontSize: 60 }}
                 />
@@ -140,7 +145,7 @@ function Home({ openCreateOrder }) {
                   variant="h6"
                   mt={2}
                 >
-                  Release Order
+                  Pack Shipment
                 </Typography>
  
               </CardContent>

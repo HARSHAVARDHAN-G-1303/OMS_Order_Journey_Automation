@@ -56,14 +56,11 @@ function PaymentInfo({
             <MenuItem value="COD">
               COD
             </MenuItem>
- 
-            <MenuItem value="CASH">
-              CASH
+            
+            <MenuItem value="PARTNERPAY">
+              PARTNERPAY
             </MenuItem>
- 
-            <MenuItem value="PAYPAL">
-              PAYPAL
-            </MenuItem>
+           
  
           </TextField>
  
